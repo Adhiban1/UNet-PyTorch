@@ -147,3 +147,24 @@ docker tag unet-pytorch-predict:ubuntu adhiban/unet-pytorch-predict:ubuntu
 docker push adhiban/unet-pytorch-predict
 docker push adhiban/unet-pytorch-predict:ubuntu
 ```
+
+# 20 Epochs
+
+```
+>python train.py --epoch 20 --batch-size 3 --save
+...
+Train Epoch: 20 [3/27 (11%)]    Loss: 0.235412
+Train Epoch: 20 [6/27 (22%)]    Loss: 0.248010
+Train Epoch: 20 [9/27 (33%)]    Loss: 0.260933
+Train Epoch: 20 [12/27 (44%)]   Loss: 0.249919
+Train Epoch: 20 [15/27 (56%)]   Loss: 0.234743
+Train Epoch: 20 [18/27 (67%)]   Loss: 0.234228
+Train Epoch: 20 [21/27 (78%)]   Loss: 0.244294
+Train Epoch: 20 [24/27 (89%)]   Loss: 0.234752
+Train Epoch: 20 [27/27 (100%)]  Loss: 0.244324
+
+Validation set: Average loss: 0.1904, Average IOU score: 0.72, Average pixel accuracy: 0.90
+
+Best IOU: 0.7274544850516571
+Pixel accuracy: 0.8976467251777649
+```
